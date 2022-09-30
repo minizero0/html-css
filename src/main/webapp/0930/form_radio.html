@@ -9,7 +9,7 @@
 		<table>
 			<tr>
 				<td><label for = "username">이름</label></td>
-				<td><input type = "text" name = "username" id = "username"></td>
+				<td><input type = "text" name = "username" id = "username" required="required"></td>
 			</tr>
 			
 			<tr>
@@ -64,12 +64,45 @@
 								</optgroup>
 						</select>
 					</td>
-					
-					
 				</tr>
-				
-			
 			</table>
+			
+			<fieldset>
+				<legend>연락처</legend>
+				<table>
+					<tr>
+						<td>이름</td>
+						<td>
+							<input type = "text" name = "name">
+						</td>
+					</tr>
+					<tr>
+						<td>이메일</td>
+						<td>
+							<input type = "email" name = "email">
+						</td>
+					</tr>
+					<tr>
+						<td>전화</td>
+						<td>
+							<input type = "tel" name = "phone">
+						</td>
+					</tr>
+					<tr>
+						<td>나이</td>
+						<td>
+							<!-- number타입의 최소값과 최대값을 min max로 정함 사이즈는 보여지는 길이-->
+							<input type = "number" name = "age" min = "20" max ="100" size = "3">       
+						</td>
+					</tr>
+					<tr>
+						<td>홈페이지</td>
+						<td>
+							<input type = "url" name = "url" >       
+						</td>
+					</tr>
+				</table>
+			</fieldset>
 			<input type = "submit" value = "가입">
 			</form>
 </body>
