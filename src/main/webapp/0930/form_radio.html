@@ -5,6 +5,36 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<form>
+		<table>
+			<tr>
+				<td><label>이름</label></td>
+				<td><input type = "text" name = "username" id = "username"></td>
+			</tr>
+			
+			<tr>
+				<td>성별</td>
+				<td>
+					<input type = "radio" name = "gender" id = "man" value = "m">
+					<label for = "man">남자</label>
+					<input type = "radio" name = "gender" id = "woman" value = "w">
+					<label for = "woman">여자</label>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for = "snack">음식메뉴</label></td>
+				<td>
+					<select name = "snack" id = "snack">
+						<option value = "김밥">김밥</option>
+						<option value = "라면">라면</option>
+						<option value = "순대">순대</option>
+						<option value = "떡볶이">떡볶이</option>
+					</select>
+				</td>
+			</tr>
+			</table>
+			<input type = "submit" value = "가입">
+			</form>
 </body>
 </html>
