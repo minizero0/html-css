@@ -1,0 +1,29 @@
+* {
+		margin: 0;
+		padding: 0;
+		
+		}
+		body{
+			width:960px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		#menu {
+			width:260px;
+			float: right;
+		}
+		#section{
+			width:700px;
+			float: left;
+		}
+		li{
+			list-style: none;
+		}
+		@media screen and (max-width:767px){
+			body,#menu,#section{
+				width:auto;
+			}
+			#menu,#section{
+				float:none;
+			}
+		}
