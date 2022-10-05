@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		setInterval(function(){		//이벤트 핸들러
+			var now = new Date();
+			document.getElementById("clock").innerHTML = now;
+		}, 1000);		//1000이면 1초, 2000이면 2초 setInterval = 특정시간마다 함수호출
+		
+	}
+
+</script>
+</head>
+<body>
+	<h1 id = "clock"></h1>
+</body>
+</html>
