@@ -3,26 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript">
-	window.onload = function(){
-		document.getElementById("btn").onclick = function(){
-			var n1 = Number(document.getElementById("num1").value);
-			var n2 = Number(document.getElementById("num2").value);
-			var n3 = Number(document.getElementById("num3").value);
-			
-			var max = n1;
-			if(n2 > max){
-				max = n2;
-				if (n3 > max){max = n3;}
-			}
-			else if (n3 > n1)
-				max = n3;
-			
-			document.getElementById("result").innerHTML = max;
-						
-		}
-	}
-</script>
 </head>
 <body>
 
@@ -32,5 +12,25 @@
 <button id = "btn">큰수찾기</button>
 <hr>
 결과 : <span id = "result"></span>
+
+<script type="text/javascript">
+	document.getElementById("btn").onclick = function(){
+	var n1 = Number(document.getElementById("num1").value);
+	var n2 = Number(document.getElementById("num2").value);
+	var n3 = Number(document.getElementById("num3").value);
+	
+	var max = n1;
+	if(n2 > max){
+		max = n2;
+		if (n3 > max){max = n3;}
+	}
+	else if (n3 > n1)
+		max = n3;
+	
+	document.getElementById("result").innerHTML = max;
+				
+}
+</script>
+
 </body>
 </html>
