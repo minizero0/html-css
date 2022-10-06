@@ -5,30 +5,42 @@ x<!DOCTYPE html>
 <title>Insert title here</title>
 <script type="text/javascript">
 	var data = [
-		"베트남 다낭 호텔 수영장서 한국인 감전돼 사망",
-		"베트남 다낭을 찾은 한국인 관광객이 호텔 수영장에서 감전 사고로 사망하는 사건이 발생했다",
-		"신고를 받은 구급 대원이 출동해 심폐소생술을 했지만 끝내 사망했다."
+		{no:1, name:'sc1', qty:10, price:15000, fname:'ball1.jpg'},
+		{no:2, name:'sc2', qty:7, price:35000, fname:'ball2.jpg'},
+		{no:3, name:'sc3', qty:6, price:65000, fname:'ball3.jpg'},
+		{no:4, name:'sc4', qty:5, price:105000, fname:'ball4.jpg'},
+		{no:5, name:'sc5', qty:3, price:25000, fname:'ball5.jpg'}
 	]
+
 	window.onload = function(){
-		var news = document.getElementById("news");
-		var n = 1;
-		var n2 = 0;
+		var ball = document.getElementById("ball");
+		var no = document.getElementById("no");
+		var name = document.getElementById("name");
+		var qty = document.getElementById("qty");
+		var price = document.getElementById("price");
+
+		var i = 0;
 		setInterval(function(){
-			var txt = data[n2].substr(0,n)
-			n++;
-			news.value = txt;
-			if(n > data[n2].length){
-				n = 1;
-				n2++;
-			}
-			if(n2 >= data.length){
-				n2 = 0;
-			}
-		}, 100)
+			ball.src = data[i].fname
+			no.innerHTML = data[i].no
+			name.innerHTML = data[i].name
+			qty.innerHTML = data[i].qty
+			price.innerHTML = data[i].price
+			i++
+			if(i >= data.length)
+				i = 0;
+		},1000)
 	}
+	
 </script>
 </head>
 <body>
-	실시간 뉴스 : <input type="text" size="100" id = "news"> 
+	<img src = "ball1.jpg" id ="ball" width="150" height="150">
+	<hr>
+	상품번호: <span id = "no"></span><br>
+	상품명: <span id="name"></span><br>
+	수량: <span id="qty"></span><br>
+	가격: <span id="price"></span><br>
+	
 </body>
 </html>
