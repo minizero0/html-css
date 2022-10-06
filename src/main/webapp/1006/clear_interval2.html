@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var timer = document.getElementById("times");
+		var myID;
+		document.getElementById("start").onclick = function(){
+			myID = setInterval(function(){
+			var today = new Date();
+			var hh = today.getHours()
+			var mm = today.getMinutes()
+			var ss = today.getSeconds()
+			var str = hh+":"+mm+":"+ss;
+			timer.innerHTML = str;
+			},1000)
+		}
+		
+		
+		document.getElementById("stop").onclick = function(){
+		
+			clearInterval(myID)				//인터벌 종료
+		}
+		
+	}
+</script>
+</head>
+<body>
+	현재시각 : <span id = "times"></span>
+	<hr>
+	<button id = "start">타이머 가동</button>
+	<button id="stop">타이머 중지</button>
+</body>
+</html>
