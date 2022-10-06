@@ -1,0 +1,34 @@
+x<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var data = [
+		"베트남 다낭 호텔 수영장서 한국인 감전돼 사망",
+		"베트남 다낭을 찾은 한국인 관광객이 호텔 수영장에서 감전 사고로 사망하는 사건이 발생했다",
+		"신고를 받은 구급 대원이 출동해 심폐소생술을 했지만 끝내 사망했다."
+	]
+	window.onload = function(){
+		var news = document.getElementById("news");
+		var n = 1;
+		var n2 = 0;
+		setInterval(function(){
+			var txt = data[n2].substr(0,n)
+			n++;
+			news.value = txt;
+			if(n > data[n2].length){
+				n = 1;
+				n2++;
+			}
+			if(n2 >= data.length){
+				n2 = 0;
+			}
+		}, 100)
+	}
+</script>
+</head>
+<body>
+	실시간 뉴스 : <input type="text" size="100" id = "news"> 
+</body>
+</html>

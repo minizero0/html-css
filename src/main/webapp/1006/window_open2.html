@@ -6,18 +6,21 @@
 <script type="text/javascript">
 //새로운 윈도우 창 열기
 	window.onload = function(){
+		var w;
 		document.getElementById("btnNew").onclick = function(){
-			window.open();
+			w = window.open("","","width=600,height=300")
 		}
-		document.getElementById("btnHanb").onclick = function(){
-			window.open("http://www.hanb.co.kr","hanb","width=400, height = 300")
+
+		document.getElementById("btnAdd").onclick = function(){
+			w.document.write("<h1>Hello javascript</h1>")
+
 		}
-		
 	}
+
 </script>
 </head>
 <body>
 	<button id = "btnNew">newwindow</button>
-	<button id = "btnHanb">한빛소프트</button>
+	<button id = "btnAdd">새창에 노드 생성</button>
 </body>
 </html>

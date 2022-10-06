@@ -1,0 +1,32 @@
+x<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var data = [
+		"ball1.jpg",
+		"ball2.jpg",
+		"ball3.jpg",
+		"ball4.jpg",
+		"ball5.jpg"
+	]
+	window.onload = function(){
+		var ball = document.getElementById("ball");
+		n = 0;
+		setInterval(function(){
+			var txt = data[n]
+			
+			ball.src = txt
+			n++;
+			if(n >= data.length){
+				n = 0;
+			}
+		}, 1000)
+	}
+</script>
+</head>
+<body>
+<img src = "ball1.jpg" id ="ball">
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//새로운 윈도우 창 열기
+	window.onload = function(){
+		document.getElementById("btnOpen").onclick = function(){
+			var w = window.open("info.html","","width = 400, height = 300")
+			var name = document.getElementById("name").value;
+			// w.document.getElementById("name").value = name			
+		}
+	}
+
+</script>
+</head>
+<body>
+이름: <input type="text" id="name"><br>
+나이: <input type="text" id="age"><br>
+	<button id = "btnOpen">입력창 열기</button>
+
+</body>
+</html>
