@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var data = [];
+	
+	function add() {
+		var name = document.getElementById("name").value
+		var kor = document.getElementById("kor").value
+		var eng = document.getElementById("eng").value
+		var math = document.getElementById("math").value
+		
+		var obj = {name:name, kor:kor, eng:eng, math:math}
+		data.push(obj)
+	}
+	function data_print() {
+		console.log(data);
+	}
+</script>
+</head>
+<body>
+	이름:<input type="text" id ="name"><br>
+	국어:<input type="text" id ="kor"><br>
+	영어:<input type="text" id ="eng"><br>
+	수학:<input type="text" id ="math"><br>
+	<button id = "btn_add" onclick="add()">배열에 담기</button>
+	<button id = "btn_print" onclick="data_print()">배열 출력</button>
+	
+</body>
+</html>

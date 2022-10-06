@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById("f").onsubmit = function(){
+			var id = document.getElementById("id").value;
+			var pwd = document.getElementById("pwd").value;
+			var checkPwd = document.getElementById("checkPwd").value;
+			var name = document.getElementById("name").value;
+			var age = document.getElementById("age").value;
+			var email = document.getElementById("email").value;
+			var phone = document.getElementById("phone").value;
+			
+			if(id.length == 0 || pwd.length == 0 || name.length == 0 || age.length == 0||
+				email.length == 0 || phone.length ==0){
+					alert("모든 항목을 입력해주세요")
+					return false
+				}
+			var ch = id.charAt(0)
+			if((ch >= 'a' && ch <='z') || ch >= 'A' && ch <= 'Z'){
+
+			}else{
+				alert("아이디의 첫글자는 영문이어야 합니다.")
+				return false
+			}
+
+			if (id.length < 6 || id.length > 12){
+				alert("아이디는 6~12자 이내로 작성해주세요")
+				return false
+			}
+
+			if(pwd != checkPwd){
+				alert("암호가 일치하지않습니다.")
+			}
+			
+			if(pwd.length < 6 || pwd.length > 12){
+				alert("암호의 길이는 6~12자 이내로 작성해주세요")
+				return false
+			}
+			if(isNaN(age)){
+				alert("나이는 숫자로 입력해주세요")
+				return false
+			}
+		
+		}
+	}
+</script>
+</head>
+<body>
+	<form id="f" action = "result.jsp" method = "post">
+		아이디 : <input type = "text" name = "id" id="id" required = "required"><br>
+		암호:	<input type="password" name = "pwd" id="pwd" required = "required"><br>
+		암호확인:	<input type="password" id = "checkPwd" required = "required"><br>
+		이름:	<input type="text" name = "name" id="name" required = "required"><br>
+		나이:	<input type="number" name = "age" id="age" required = "required"><br>
+		이메일:	<input type="email" name = "email" id="email" required = "required"><br>
+		전화:	<input type="text" name = "phone" id="phone" required = "required"><br>
+		<input type="submit" value="확인">
+		<input type="reset" value="취소">
+	</form>
+</body>
+</html>

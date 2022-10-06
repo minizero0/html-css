@@ -7,16 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	request.setCharacterEncoding("utf-8");
-	String name = request.getParameter("name");
-	int num = Integer.parseInt((request.getParameter("age"))); 
-	
-%>
-
-이름 :<%= name %>
-나이 :<%= num %>
-
-
+	<script>
+		document.ele	
+		
+		</script>
 </body>
 </html>
