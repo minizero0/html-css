@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function () {
+		document.getElementById("btnAdd").onclick = function(){
+			var str = document.getElementById("addMenu").value
+			// document.getElementById("menu").li += str;
+			var li = document.createElement("li") 				//정식 태그 생성
+			var txt = document.createTextNode(str)
+			li.appendChild(txt);
+			document.getElementById("menu").appendChild(li);
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<h2>점심 메뉴를 추천해 주세요</h2>
+	<ul id = "menu">
+		<li>김치찌개</li>
+		<li>된장찌개</li>
+	</ul>
+	<hr>
+	<input type="text" id = "addMenu">
+	<button id="btnAdd">추가</button>
+</body>
+</html>
