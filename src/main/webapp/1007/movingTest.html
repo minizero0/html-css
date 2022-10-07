@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function nextRandomInteger(limit){
+		return Math.round(Math.random()*limit)
+	}
+
+	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	function randomAlphabet(){
+		return alphabet.charAt(nextRandomInteger(25))
+	}
+
+	function randomSpeed(maxSpeed){
+		return Math.random() * maxSpeed - Math.random() * maxSpeed
+	}
+
+	var a = randomSpeed(10)
+	alert(a)
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

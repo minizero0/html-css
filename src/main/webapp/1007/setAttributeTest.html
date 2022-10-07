@@ -17,9 +17,9 @@
 			var tr = document.createElement("tr")
 			tr.setAttribute("data_index",idx)
 			tr.onclick = function(){
-				var data_index = this.getAttribute("data_index")
-				var row = arr[data_index]
-				document.getElementById("name").value = row.name
+				var data_index = this.getAttribute("data_index")		//클릭된 tr의 인덱스 번호를 받는다
+				var row = arr[data_index]								//배열을 객체로 받는 row 생성
+				document.getElementById("name").value = row.name		//각각에 입력창에 정보 전달
 				document.getElementById("kor").value = row.kor
 				document.getElementById("eng").value = row.eng
 				document.getElementById("math").value = row.math
