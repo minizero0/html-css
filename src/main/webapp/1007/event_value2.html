@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#wrap{
+		width: 600px;
+		height: 800px;
+		border: 1px solid red;
+		position: relative;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var img = document.getElementById("image")
+		img.style.position = "absolute"
+		document.body.onclick = function(event){
+			var x = event.x;
+			var y = event.y;
+			img.style.left = x + 'px'
+			img.style.top = y + 'px'
+		}
+	}	
+	
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<img src="./images/ball1.jpg" width="50" height="50" id="image">
+	</div>
+</body>
+</html>
