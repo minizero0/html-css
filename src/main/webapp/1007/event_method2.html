@@ -10,15 +10,12 @@
 			width:100,
 			height:100,
 			background:'orange'
-		}).on("mouseenter", function(){
-			$(this).css("background", 'blue')
-			$(this).css("border-radius","50%")
-		}).on("click",function(){
-			$(this).css("background", 'red')
-			$(this).css("border-radius","0%")
-		}).on("mouseleave",function(){
-			$(this).css("background", 'orange')
-			$(this).css("border-radius","0%")
+		}).mouseenter(function(){
+			$(this).css("background","blue")
+		}).click(function(){
+			$(this).css("background","red")
+		}).mouseleave(function(){
+			$(this).css("background","orange")
 		})
 	})
 </script>
