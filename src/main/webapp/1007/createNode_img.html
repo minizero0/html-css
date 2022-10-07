@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById("btn").onclick = function(){
+			var img = document.createElement("img")
+			img.setAttribute("src", "./images/ball1.jpg")
+			img.setAttribute("width", "100")
+			img.setAttribute("height", "100")
+			img.setAttribute("data_idex", 100)
+
+			document.getElementById("wrap").appendChild(img)
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="wrap"></div>
+	<button id="btn">이미지 노드 생성</button>
+</body>
+</html>
