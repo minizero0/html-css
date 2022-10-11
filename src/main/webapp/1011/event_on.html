@@ -7,17 +7,45 @@
 	.high_light{
 		background: pink;
 	}
+	.click_event{
+		background: red;
+	}
 </style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		$("li").mouseover(function(){
+		$("li").on({
+			mouseover:function(){
+				$(this).addClass("high_light")
+			},
+			mouseleave:function(){
+				$(this).removeClass("high_light")
+			},
+			click:function(){
+				$("#input").val($(this).text())
+				$("li").removeClass("click_event")
+				$(this).addClass("click_event")
+			}
+		})
+
+
+		// $("li").on("mouseover",function(){
+		// 	$(this).addClass("high_light")
+		// })
+		// $("li").on("mouseleave",function(){
+		// 	$(this).removeClass("high_light")
+		// })
+		/* $("li").mouseover(function(){
 			$(this).addClass("high_light")
 		})
 		$("li").mouseleave(function(){
 			$(this).removeClass("high_light")
 		})
-		
+		$("li").click(function(){
+			$("#input").val($(this).text())
+			$("li").removeClass("click_event")
+			$(this).addClass("click_event")
+		}) */
 	});
 </script>
 </head>
@@ -29,5 +57,6 @@
 		<li>사람</li>
 		<li>돈</li>
 	</ul>
+	<input type="text" id = "input">
 </body>
 </html>
