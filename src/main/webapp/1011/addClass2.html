@@ -17,6 +17,9 @@
 		$("li").mouseleave(function(){
 			$(this).removeClass("high_light")
 		})
+		$("li").click(function(){
+			$("#input").val($(this).text())
+		})
 		
 	});
 </script>
@@ -29,5 +32,7 @@
 		<li>사람</li>
 		<li>돈</li>
 	</ul>
+	<hr>
+	<input type="text" id = "input">
 </body>
 </html>
