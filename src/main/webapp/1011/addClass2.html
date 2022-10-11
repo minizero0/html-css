@@ -7,6 +7,9 @@
 	.high_light{
 		background: pink;
 	}
+	.click_event{
+		background: red;
+	}
 </style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
@@ -19,8 +22,9 @@
 		})
 		$("li").click(function(){
 			$("#input").val($(this).text())
+			$("li").removeClass("click_event")
+			$(this).addClass("click_event")
 		})
-		
 	});
 </script>
 </head>
