@@ -3,9 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+	.high_light{
+		background: red;
+	}
+	
+	.select{
+		background: green;
+	}
+
+</style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
+
+		var selLi;
+
 		$("#btnAdd").click(function(){
 			var li = $("<li></li>").html($("#name").val())
 			$("#list").append(li)
@@ -16,6 +29,19 @@
 		$(document).on("click","li",function(){		//새로 등록한 li에도 이벤트를 부여할 수 있다. 
 			$("#name").val($(this).html())
 			$("#name").focus()
+			$("li").removeClass("select")
+			$(this).addClass("select")
+			selLi = this
+		})
+		$(document).on("mouseover","li",function(){
+			$(this).addClass("high_light")
+		})
+		$(document).on("mouseleave","li",function(){
+			$(this).removeClass("high_light")
+		})
+
+		$("#btnUpdate").click(function(){
+			$(selLi).html($("#name").val())
 		})
 	});
 </script>
@@ -27,5 +53,6 @@
 	</ul>
 	<input type="text" id="name">
 	<button id="btnAdd">추가</button>
+	<button id="btnUpdate">변경</button>
 </body>
 </html>
