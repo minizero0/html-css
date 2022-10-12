@@ -13,11 +13,9 @@
 			$("#name").focus()
 		})
 
-		$("li").click(function(){
+		$(document).on("click","li",function(){		//새로 등록한 li에도 이벤트를 부여할 수 있다. 
 			alert('ok')
 		})
-
-		//미래에 만들어진 li에는 이벤트가 동작하지 않는다.
 	});
 </script>
 </head>
