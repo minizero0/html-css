@@ -43,6 +43,9 @@
 		$("#btnUpdate").click(function(){
 			$(selLi).html($("#name").val())
 		})
+		$("#btnDelete").click(function(){
+			$(selLi).remove()
+		})
 	});
 </script>
 </head>
@@ -54,5 +57,6 @@
 	<input type="text" id="name">
 	<button id="btnAdd">추가</button>
 	<button id="btnUpdate">변경</button>
+	<button id="btnDelete">삭제</button>
 </body>
 </html>
