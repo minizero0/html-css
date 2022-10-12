@@ -3,19 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+	.high_light{
+		background: red;
+	}
+</style>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
+		var input = $("input[type=text]")
 		$("#btnAdd").click(function(){
-			var input = $("input[type=text]")
-			var tr = $("<tr></tr>")
+			
+			var tr = $("<tr></tr>").addClass("student")
 			var tot = 0
 			for(i=0;i<input.length;i++){
 				if(i!=0){
 					tot += Number($(input[i]).val())
-			}
-			var td = $("<td></td>").html($(input[i]).val())
-			$(tr).append(td)
+				}
+				var td = $("<td></td>").html($(input[i]).val())
+				$(tr).append(td)
 			}
 			$(tr).append($("<td></td>").html(tot))
 			$(tr).append($("<td></td>").html(Math.round(tot/3)))
@@ -26,6 +32,18 @@
 			}
 			$(input[0].focus())
 		})
+		
+		
+		$(document).on("click",".student",function(){		//새로 등록한 li에도 이벤트를 부여할 수 있다.
+			var td_list = $(this).find("td")
+			for(i=0;i<input.length;i++){
+				$(input[i]).val($(td_list[i]).html())
+			}
+
+			$(".student").removeClass("high_light")
+			$(this).addClass("high_light")
+		})
+		
 	});
 </script>
 </head>
