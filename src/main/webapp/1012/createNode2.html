@@ -14,7 +14,8 @@
 		})
 
 		$(document).on("click","li",function(){		//새로 등록한 li에도 이벤트를 부여할 수 있다. 
-			alert('ok')
+			$("#name").val($(this).html())
+			$("#name").focus()
 		})
 	});
 </script>
