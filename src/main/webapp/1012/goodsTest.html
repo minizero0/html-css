@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		border: 1px solid red;
+		width: 500px;
+		height: 300px;
+		margin: 20px;
+		border-radius: 10px
+		
+	}
+</style>
+<script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var arr = [
+			{no:1,name:'축구공1',qty:10,price:10000,fname:'./img/ball1.jpg'},
+			{no:2,name:'축구공2',qty:10,price:10000,fname:'./img/ball2.jpg'},
+			{no:3,name:'축구공3',qty:10,price:10000,fname:'./img/ball3.jpg'},
+			{no:4,name:'축구공4',qty:10,price:10000,fname:'./img/ball4.jpg'},
+			{no:5,name:'축구공5',qty:10,price:10000,fname:'./img/ball5.jpg'},
+
+			{no:6,name:'유니폼1',qty:10,price:56000,fname:'./img/cloth1.jpg'},
+			{no:8,name:'유니폼2',qty:10,price:50000,fname:'./img/cloth2.jpg'},
+			{no:7,name:'유니폼3',qty:10,price:56000,fname:'./img/cloth3.jpg'},
+			{no:9,name:'유니폼4',qty:10,price:56000,fname:'./img/cloth4.jpg'},
+			{no:10,name:'유니폼5',qty:10,price:56000,fname:'./img/cloth5.jpg'},
+
+			{no:11,name:'신발1',qty:10,price:650000,fname:'./img/shoe1.jpg'},
+			{no:12,name:'신발2',qty:10,price:120000,fname:'./img/shoe2.jpg'},
+			{no:13,name:'신발3',qty:10,price:160000,fname:'./img/shoe3.jpg'},
+			{no:14,name:'신발4',qty:10,price:56000,fname:'./img/shoe4.jpg'},
+			{no:15,name:'신발5',qty:10,price:260000,fname:'./img/shoe5.jpg'},
+
+			{no:16,name:'스타킹1',qty:10,price:3000,fname:'./img/stock1.jpg'},
+			{no:17,name:'스타킹2',qty:10,price:3000,fname:'./img/stock2.jpg'},
+			{no:18,name:'스타킹3',qty:10,price:3000,fname:'./img/stock3.jpg'},
+			{no:19,name:'스타킹4',qty:10,price:3000,fname:'./img/stock4.jpg'},
+			{no:20,name:'스타킹5',qty:10,price:3000,fname:'./img/stock5.jpg'}
+		]
+		
+		for(i=0;i<arr.length;i++){
+			var div = $("<div></div>")
+			$(div).append(arr[i].no)
+			$(div).append(arr[i].name)
+			$(div).append(arr[i].qty)
+			$(div).append(arr[i].price)
+			 $(div).append(arr[i].fname)
+			
+			$("body").append(div)
+			
+		}
+		
+	});
+</script>
+</head>
+<body>
+	<div class = "goods" >
+		<img src = "./img/ball1.jpg" width ="100" height = "100">
+	</div>
+
+</body>
+</html>
