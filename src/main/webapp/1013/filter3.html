@@ -6,20 +6,17 @@
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		var student = {name:"홍길동"};
-		student.age = 20;
-		student.addr = "서울";
-		console.log(student)
-
-		$.extend(student,{
-			kor:100,
-			eng:80,
-			math:60
-		})
+		$("h3").css("background","orange").filter(":even").css("color","red").end().filter(":odd").css("color","white")
 	});
 </script>
 </head>
 <body>
+	<h3>홍길동</h3>
+	<h3>김유신</h3>
+	<h3>유관순</h3>
+	<h3>김길동</h3>
+	<h3>김철수</h3>
+	<h3>박철수</h3>
 	
 </body>
 </html>
