@@ -50,13 +50,13 @@
 		
 		var xmlDoc = $.parseXML(data);
 		var arr = $(xmlDoc).find("dept");
-		var table = $("<table></table>").addClass("table table-striped");
+		
 		
 		var tr = $("<tr></tr>");
 		$(tr).append($("<th></th>").html("부서번호"));
 		$(tr).append($("<th></th>").html("부서명"));
 		$(tr).append($("<th></th>").html("부서위치"));
-		$(table).append(tr);
+		$("#table").append(tr);
 		$.each(arr, function(){
 			var dno = $(this).find("dno").text();
 			var dname = $(this).find("dname").text();
@@ -66,15 +66,15 @@
 			$(tr).append($("<td></td>").html(dno));
 			$(tr).append($("<td></td>").html(dname));
 			$(tr).append($("<td></td>").html(dloc));
-			$(table).append(tr);
+			$("#table").append(tr);
 		});
 
-		$("body").append(table);
+		
 
 	});
 </script>
 </head>
 <body>
-	
+	<table id="table" class="table table-striped"></table>
 </body>
 </html>
