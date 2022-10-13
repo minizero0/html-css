@@ -13,9 +13,15 @@
 			{name:"google",link:"http://google.com"}
 		]
 
-		$.each(array,function(index,item){
-			var h = $("<h1></h1>").html(item.name)
-			var a = $("<a></a>").html(h).attr("href", item.link)
+		// $.each(array,function(index,item){
+		// 	var h = $("<h1></h1>").html(item.name)
+		// 	var a = $("<a></a>").html(h).attr("href", item.link)
+		// 	$("body").append(a)
+		// })
+
+		$.each(array, function(){
+			var h = $("<h1></h1>").html(this.name)
+			var a = $("<a></a>").html(h).attr("href", this.link)
 			$("body").append(a)
 		})
 
